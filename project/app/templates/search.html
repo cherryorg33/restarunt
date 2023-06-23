@@ -1,0 +1,13 @@
+<form method="GET">
+    <input type="text" name="query" placeholder="Search for a dish">
+    <button type="submit">Search</button>
+</form>
+
+{% if results %}
+    <h2>Search Results:</h2>
+    <ul>
+        {% for dish in results %}
+            <li>{{ dish.name }}</li>
+        {% endfor %}
+    </ul>
+{% endif %}
